@@ -160,7 +160,8 @@ def load_celeba_dataset(root,
     Returns:
         Dataset: Torch Dataset object.   
     """
-    dataset_dir = os.path.join(root, 'celeba')
+    dataset_dir = root
+    print(os.path.abspath(dataset_dir))
     if not os.path.exists(dataset_dir):
         os.makedirs(dataset_dir)
 
@@ -184,7 +185,6 @@ def load_celeba_dataset(root,
 
     if download:
         print("INFO: download is True. Downloading CelebA images...")
-
     dataset = torchvision.datasets.CelebA(root=dataset_dir,
                                           transform=transform,
                                           download=download,

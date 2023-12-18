@@ -1,0 +1,6 @@
+__pycache__/
+.eggs/
+.idea/
+build/
+*/log/
+torch_mimicry.egg-info/
